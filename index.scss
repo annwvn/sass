@@ -1,0 +1,58 @@
+@charset "utf-8";
+html{
+	font-size:100px;
+}
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	font-size:.14rem;
+	font-family:"??";
+	box-sizing:border-box;
+}
+body{
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+}
+button,textarea,select,input{
+	appearance:none;
+}
+a{
+	tap-highlight-color:rgba(0,0,0,0);
+}
+@mixin num($w,$h){
+	width:$w;
+	height:$h;
+}
+@mixin cir($w){
+	width:$w;
+	height:$w;
+	border-radius:50%;
+	display:inline-block;
+}
+@mixin cen($h){
+	text-align:center;
+	line-height:$h;
+}
+@mixin flex($j:space-between){
+	display:flex;
+	display:-weblit-flex;
+	justify-content:$j;
+	-weblit-justify-content:$j;
+	align-items:center;
+	-webkit-align-items:center;
+}
+%text{
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+%full{
+	width:100%;
+	height:100%;
+}
+html,body,.warp{
+	@include num(100%,100%);
+}
+$bg:background;
